@@ -1,3 +1,7 @@
+# BAEKJOON 1904
+#
+# 링크 : https://www.acmicpc.net/problem/1904
+
 # 1 => 1 => 1
 # 2 => 00 11 => 2
 # 3 => 001 100 111 => 3
