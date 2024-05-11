@@ -27,3 +27,5 @@ while len(need_visit) > 0:
     print(f"visited: {visited}")
     print(f"need_visit: {need_visit}")
     step += 1
+
+print(visited)
