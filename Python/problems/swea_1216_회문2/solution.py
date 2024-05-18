@@ -51,8 +51,9 @@ for _ in range(1, T + 1):
     chars = [list(input()) for _ in range(SIZE)]
 
     answer = 1
-    for i in range(2, SIZE):
+    for i in range(99, 1, -1):
         if search(i):
             answer = i
+            break
 
     print(f"#{case_no} {answer}")
