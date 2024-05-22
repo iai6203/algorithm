@@ -20,6 +20,11 @@ def solution(begin, target, words):
         while len(queue) > 0:
             current_word, current_count = queue.popleft()
 
+            if current_word in words:
+                visited[words.index(current_word)] = True
+
+            # print(f"word={current_word}, count={current_count}, visited={visited}")
+
             if current_word == target:
                 answer = current_count
                 break
