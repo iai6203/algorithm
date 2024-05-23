@@ -17,6 +17,11 @@
 - SW Expert Academy: 50+
 - 백준: 40+
 
+### 🤚 도움받은 문제
+
+- [프로그래머스 - 전화번호 목록](https://school.programmers.co.kr/learn/courses/30/lessons/42577)   
+  ↳ 효용성 테스트에서 계속해서 실패해서 검색 후 문제 해결
+
 ### 🔗 문제 사이트
 
 - [프로그래머스](https://programmers.co.kr/)
