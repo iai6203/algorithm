@@ -21,6 +21,8 @@
 
 - [프로그래머스 - 전화번호 목록](https://school.programmers.co.kr/learn/courses/30/lessons/42577)   
   ↳ 효용성 테스트에서 계속해서 실패해서 검색 후 문제 해결
+- [프로그래머스 - 등굣길](https://school.programmers.co.kr/learn/courses/30/lessons/42898)  
+  ↳ 효용성 테스트에서 계속해서 실패해서 검색 후 문제 해결
 
 ### 🔗 문제 사이트
 
