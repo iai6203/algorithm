@@ -3,19 +3,27 @@
 # https://school.programmers.co.kr/learn/courses/30/lessons/42584
 
 def solution(prices):
-    answer = []
+    ans = [0] * len(prices)
+    stack = []
 
-    for i in range(len(prices) - 1):
-        sec = 0
+    for c_i in range(len(prices)):
+        if len(stack) == 0 or prices[c_i] >= prices[stack[-1]]:
+            stack.append(c_i)
+        else:
+            while stack:
+                if prices[c_i] < prices[stack[-1]]:
+                    p_i = stack.pop()
 
-        for j in range(i + 1, len(prices)):
-            sec += 1
+                    ans[p_i] = c_i - p_i
+                else:
+                    break
 
-            if prices[i] > prices[j]:
-                break
+            stack.append(c_i)
 
-        answer.append(sec)
+    for i in stack:
+        ans[i] = len(prices) - i - 1
 
-    answer.append(0)
+    return ans
 
-    return answer
+
+solution([1, 2, 3, 2, 3])
