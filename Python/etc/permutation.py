@@ -1,19 +1,23 @@
 # 순열 (Permutation)
 
-def permutation(arr, r):
-    used = [0] * len(arr)
+def permutation(n, r):
+    ans = []
 
-    def generate(chosen, used):
+    def generate(chosen, checklist):
+        nonlocal ans
+
         if len(chosen) == r:
-            print(chosen)
+            ans.append(chosen.copy())
             return
 
-        for i in range(len(arr)):
-            if not used[i]:
-                chosen.append(arr[i])
-                used[i] = 1
-                generate(chosen, used)
-                used[i] = 0
+        for i in range(len(n)):
+            if checklist[i] == 0:
+                chosen.append(n[i])
+                checklist[i] = 1
+                generate(chosen, checklist)
                 chosen.pop()
+                checklist[i] = 0
 
-    generate([], used)
+    generate([], [0] * len(n))
+
+    return ans
