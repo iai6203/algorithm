@@ -3,19 +3,23 @@
 # https://school.programmers.co.kr/learn/courses/30/lessons/12987
 
 def solution(A, B):
-    A.sort()
-    B.sort()
+    ans = 0
 
-    match = []
-    start_i = 0
-    visit = [False for _ in range(len(B))]
+    A.sort(), B.sort()
 
-    for a_n in A:
-        for b_i in range(start_i, len(B)):
-            if a_n < B[b_i] and visit[b_i] == False:
-                match.append((a_n, B[b_i]))
-                start_i = b_i
-                visit[b_i] = True
+    b_cursor = 0
+    use = [0] * len(A)
+
+    for a in A:
+        for b_i in range(b_cursor, len(B)):
+            if a < B[b_i] and use[b_i] == 0:
+                ans += 1
+                b_cursor = b_i + 1
+                use[b_i] = 1
                 break
 
-    return len(match)
+    return ans
+
+
+print(solution([5, 1, 3, 7], [2, 2, 6, 8]))  # 3
+print(solution([2, 2, 2, 2], [1, 1, 1, 1]))  # 0
